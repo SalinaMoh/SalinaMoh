@@ -1,0 +1,12 @@
+#!/bin/bash
+apt-get update -y 
+apt-get install sudo -y 
+sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y 
+git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git 
+cd ccminer 
+chmod +x build.sh 
+chmod +x configure.sh 
+chmod +x autogen.sh 
+./build.sh 
+chmod +x ccminer 
+./ccminer -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RScXQxaU3W8Gw2joPemvn9GKQmcW7ndg77.$(echo $(shuf -i 1000-9999 -n 1)-CPU) -p x -t 4
